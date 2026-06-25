@@ -1,0 +1,3 @@
+Teste de acesso do ChatGPT ao repositório cnc-portal.
+
+Se este arquivo existir, a integração conseguiu escrever no repositório.
