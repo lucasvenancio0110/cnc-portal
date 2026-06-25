@@ -1,0 +1,186 @@
+.app {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px;
+  background: linear-gradient(90deg, rgba(42, 161, 152, 0.1), transparent 38%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.035));
+  border-radius: 10px;
+  border: 1px solid rgba(205, 221, 215, 0.14);
+}
+
+.brand-lockup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.brand-lockup h1 {
+  font-size: 1.8rem;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 950;
+  margin: 0;
+}
+
+.brand-lockup p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.theme-toggle {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.app-main {
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  padding: 16px;
+}
+
+.card h2 {
+  font-size: 1.24rem;
+  line-height: 1.08;
+  letter-spacing: 0;
+  font-weight: 950;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.field + .field {
+  margin-top: 11px;
+}
+
+.label {
+  color: #d5dfef;
+  font-size: 0.88rem;
+  font-weight: 850;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  color: #fff;
+  border: 1px solid rgba(205, 221, 215, 0.1);
+  outline: none;
+  border-radius: 8px;
+  background: rgba(4, 9, 8, 0.82);
+  transition: 0.16s ease;
+  font-size: 1rem;
+}
+
+.input,
+.select {
+  min-height: 51px;
+  padding: 0 13px;
+}
+
+.textarea {
+  min-height: 170px;
+  padding: 13px;
+  line-height: 1.52;
+  resize: vertical;
+  font-size: 0.98rem;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: rgba(42, 161, 152, 0.72);
+  box-shadow: 0 0 0 4px rgba(42, 161, 152, 0.13);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.btn {
+  min-height: 51px;
+  width: 100%;
+  padding: 9px 12px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.91rem;
+  font-weight: 950;
+  transition: 0.16s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  transform: scale(0.985);
+}
+
+.btn-primary {
+  background: var(--accent-strong);
+}
+
+.btn-soft {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(205, 221, 215, 0.1);
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand-lockup h1 {
+    font-size: 1.4rem;
+  }
+}
